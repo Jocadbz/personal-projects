@@ -1,0 +1,21 @@
+##############################
+# Example config for Lazyfetch
+# Jocadbz - MIT License
+##############################
+
+[config]
+# Here it where you should define the folders your modules are.
+path = "/home/yourname/.config/lazyfetch/modules"
+
+# Define your modules here.
+# Lazyfetch builtins are:
+# - title
+# - separator
+# - desktop
+# - os
+# - kernel
+# - shell
+# - uptime
+# - term
+
+modules = ["title", "separator", "kernel", "terminal", "uptime"]

@@ -1,0 +1,9 @@
+##############################
+# Example module for Lazyfetch
+# Written by Jocadbz - MIT license
+##############################
+
+[module]
+title = "uptime"
+command = "uptime -p"
+pre = "Uptime: "

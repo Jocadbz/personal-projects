@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "torvalds-api"
+version = "0.1.0"
+description = "Features the best Torvalds's rants on the mailing lists."
+authors = ["Jocadbz <madureirajoaquim95@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask-RESTful = "^0.3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

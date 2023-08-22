@@ -1,0 +1,25 @@
+print Hello everyone.
+print This document has the purpose of explaining to you how it is used The BBIL (Based, Bad Interpreted Language)
+print As you've seen, *print* prints things.
+#
+#
+# That's a commentary. BBIL does not support lines without anything, so you will have
+# to populate them with #.
+#
+create sus
+# This command will create a file called sus on your directory.
+#
+move sus sussy
+# this command will rename sus to sussy
+#
+delete sussy
+# This will delete the file sussy
+#
+execute echo
+# This will execute echo
+#
+# That's it, you saw everything
+# Now, to run:
+# ./bbil main.bbil 
+# To start the REPL:
+# ./bbil
