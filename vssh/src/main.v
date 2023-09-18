@@ -112,7 +112,8 @@ fn ssh_list() {
 	for connect in connections {
 		doc := toml.parse_file("${config}/sshmanagercli/connections/${connect}") or { panic(err) }
 		println("- ${doc.value('name').string()}
-${doc.value('user').string()}@${doc.value('ip').string()} Port=${doc.value('port').string()}
+${doc.value('user').string()}@${doc.value('ip').string()}
+Port=${doc.value('port').string()}
 ")
 	}
 }
@@ -123,8 +124,10 @@ fn ssh_connect(connection string) {
 		println("Error: This connection dones not exists.")
 		exit(1)
 	}
-	ssh_bin := os.find_abs_path_of_executable("ssh") or { panic(err) }
-	println("Found ssh (${ssh_bin})")
+	ssh_bin := os.find_abs_path_of_executable("ssh") or { 
+		println("Error: VSSH couldn't find ssh. Make sure it's installed and in the right path.")
+		return
+	}
 	doc := toml.parse_file("${config}/sshmanagercli/connections/${connection}.toml") or { panic(err) }
 	ssh_user := doc.value("user").string()
 	ssh_ip := doc.value("ip").string()
